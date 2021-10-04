@@ -4,7 +4,7 @@ import nextstep.utils.Randoms;
 
 public class BaseBallGame {
     private static final BaseBallGame game = new BaseBallGame();
-    private static final InOutProcessor io = new InOutProcessor();
+    private static final InOutProcessor io = InOutProcessor.getInstance();
 
     private boolean continuance;
     private Numbers goal;

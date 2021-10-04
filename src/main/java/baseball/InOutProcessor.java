@@ -4,6 +4,8 @@ import nextstep.utils.Console;
 
 public class InOutProcessor {
 
+    private static final InOutProcessor io = new InOutProcessor();
+
     private static final String INVALID_LENGTH = "[ERROR] 세 자리 숫자를 입력하세요";
     private static final String NOT_NUMBER = "[ERROR] 숫자를 입력하세요";
     private static final String DUPLICATION = "[ERROR] 서로 다른 숫자를 입력하세요";
@@ -12,6 +14,12 @@ public class InOutProcessor {
 
     private static final String GAME_OVER = "3개의 숫자를 모두 맞히셨습니다! 게임 끝";
     private static final String GAME_RETRY = "3개의 숫자를 모두 맞히셨습니다! 게임 끝";
+
+    private InOutProcessor() {}
+
+    public static InOutProcessor getInstance(){
+        return io;
+    }
 
     public Numbers inputNumber() {
         System.out.print(INPUT_MESSAGE);
