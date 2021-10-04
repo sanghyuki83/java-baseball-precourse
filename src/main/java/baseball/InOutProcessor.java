@@ -61,4 +61,8 @@ public class InOutProcessor {
         }
         return true;
     }
+
+    public void printBallCounts(BallCount count) {
+        System.out.println(count);
+    }
 }

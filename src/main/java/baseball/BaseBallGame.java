@@ -58,6 +58,14 @@ public class BaseBallGame {
     }
 
     private void playBall() {
-        Numbers input = io.inputNumber();
+        boolean isFinished = false;
+
+        while (!isFinished) {
+            Numbers input = io.inputNumber();
+            BallCount count = BallCount.judge(goal, input);
+            io.printBallCounts(count);
+
+            isFinished = count.isFisish();
+        }
     }
 }
