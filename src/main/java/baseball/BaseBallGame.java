@@ -54,7 +54,7 @@ public class BaseBallGame {
     }
 
     private void askPlay() {
-        continuance = false;
+        continuance = io.askPlay();
     }
 
     private void playBall() {

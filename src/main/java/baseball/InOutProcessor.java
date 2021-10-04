@@ -10,6 +10,9 @@ public class InOutProcessor {
 
     private static final String INPUT_MESSAGE = "숫자를 입력해주세요 : ";
 
+    private static final String GAME_OVER = "3개의 숫자를 모두 맞히셨습니다! 게임 끝";
+    private static final String GAME_RETRY = "3개의 숫자를 모두 맞히셨습니다! 게임 끝";
+
     public Numbers inputNumber() {
         System.out.print(INPUT_MESSAGE);
         String input = Console.readLine().trim();
@@ -64,5 +67,23 @@ public class InOutProcessor {
 
     public void printBallCounts(BallCount count) {
         System.out.println(count);
+    }
+
+    public boolean askPlay() {
+        printGameOverAndRetry();
+        String input = Console.readLine();
+
+        while (!"1".equals(input) && !"2".equals(input)){
+            printGameOverAndRetry();
+
+            input = Console.readLine();
+        }
+
+        return "1".equals(input);
+    }
+
+    private void printGameOverAndRetry() {
+        System.out.println(GAME_OVER);
+        System.out.println(GAME_RETRY);
     }
 }
