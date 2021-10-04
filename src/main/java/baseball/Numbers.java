@@ -10,4 +10,10 @@ public class Numbers {
         this.secondNumber = secondNumber;
         this.thirdNumber = thirdNumber;
     }
+
+    public Numbers(String str) {
+        this.firstNumber = str.charAt(0) - '0';
+        this.secondNumber = str.charAt(1) - '0';
+        this.thirdNumber = str.charAt(2) - '0';
+    }
 }

@@ -4,6 +4,7 @@ import nextstep.utils.Randoms;
 
 public class BaseBallGame {
     private static final BaseBallGame game = new BaseBallGame();
+    private static final InOutProcessor io = new InOutProcessor();
 
     private boolean continuance;
     private Numbers goal;
@@ -57,5 +58,6 @@ public class BaseBallGame {
     }
 
     private void playBall() {
+        Numbers input = io.inputNumber();
     }
 }
