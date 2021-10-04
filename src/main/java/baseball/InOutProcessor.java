@@ -13,7 +13,7 @@ public class InOutProcessor {
     private static final String INPUT_MESSAGE = "숫자를 입력해주세요 : ";
 
     private static final String GAME_OVER = "3개의 숫자를 모두 맞히셨습니다! 게임 끝";
-    private static final String GAME_RETRY = "3개의 숫자를 모두 맞히셨습니다! 게임 끝";
+    private static final String GAME_RETRY = "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요";
 
     private InOutProcessor() {}
 
@@ -78,20 +78,15 @@ public class InOutProcessor {
     }
 
     public boolean askPlay() {
-        printGameOverAndRetry();
+        System.out.println(GAME_OVER);
+        System.out.println(GAME_RETRY);
         String input = Console.readLine();
 
         while (!"1".equals(input) && !"2".equals(input)){
-            printGameOverAndRetry();
-
+            System.out.println(GAME_RETRY);
             input = Console.readLine();
         }
 
         return "1".equals(input);
-    }
-
-    private void printGameOverAndRetry() {
-        System.out.println(GAME_OVER);
-        System.out.println(GAME_RETRY);
     }
 }
