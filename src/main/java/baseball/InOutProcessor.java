@@ -59,14 +59,14 @@ public class InOutProcessor {
             check &= ((c >= '0') & (c <= '9'));
         }
 
-        if(!check){
+        if (!check){
             System.out.println(NOT_NUMBER);
         }
         return check;
     }
 
     private boolean checkLength(int length) {
-        if(length != 3){
+        if (length != 3){
             System.out.println(INVALID_LENGTH);
             return false;
         }

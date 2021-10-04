@@ -17,25 +17,25 @@ public class BallCount {
     }
 
     private static void countsBall(BallCount count, Numbers goal, Numbers input) {
-        if(goal.secondNumber == input.firstNumber || goal.thirdNumber == input.firstNumber){
+        if (goal.secondNumber == input.firstNumber || goal.thirdNumber == input.firstNumber){
             count.balls++;
         }
-        if(goal.firstNumber == input.secondNumber || goal.thirdNumber == input.secondNumber){
+        if (goal.firstNumber == input.secondNumber || goal.thirdNumber == input.secondNumber){
             count.balls++;
         }
-        if(goal.firstNumber == input.thirdNumber || goal.secondNumber == input.thirdNumber){
+        if (goal.firstNumber == input.thirdNumber || goal.secondNumber == input.thirdNumber){
             count.balls++;
         }
     }
 
     private static void countsStrike(BallCount count, Numbers goal, Numbers input) {
-        if(goal.firstNumber == input.firstNumber){
+        if (goal.firstNumber == input.firstNumber){
             count.strikes++;
         }
-        if(goal.secondNumber == input.secondNumber){
+        if (goal.secondNumber == input.secondNumber){
             count.strikes++;
         }
-        if(goal.thirdNumber == input.thirdNumber){
+        if (goal.thirdNumber == input.thirdNumber){
             count.strikes++;
         }
     }
@@ -46,15 +46,15 @@ public class BallCount {
             return "낫싱";
 
         StringBuilder sb = new StringBuilder();
-        if(strikes > 0)
+        if (strikes > 0)
             sb.append(strikes).append("스트라이크 ");
-        if(balls > 0)
+        if (balls > 0)
             sb.append(balls).append("볼");
 
         return sb.toString().trim();
     }
 
-    public boolean isFisish() {
+    public boolean isFinish() {
         return this.strikes == 3;
     }
 }

@@ -65,7 +65,7 @@ public class BaseBallGame {
             BallCount count = BallCount.judge(goal, input);
             io.printBallCounts(count);
 
-            isFinished = count.isFisish();
+            isFinished = count.isFinish();
         }
     }
 }
